@@ -1,4 +1,8 @@
 import os
+import numpy
+import matplotlib.pyplot as plt
+import numpy as np
+from keras import *
 
 def check_exist_middle_new_line(rows):
     for s in rows:
@@ -7,7 +11,7 @@ def check_exist_middle_new_line(rows):
     return True
 
 def read_datas():
-    base_dir = '/Users/hwangseongho/kaggle/'
+    base_dir = '/Users/hwangseongho/kaggle/quora_question_pairs'
     train_dir = os.path.join(base_dir, 'train.csv')
     test_dir = os.path.join(base_dir, 'test.csv')
 
@@ -42,6 +46,9 @@ def read_datas():
         ret_test_rows.append(new_row)
 
     return (ret_train_rows, ret_test_rows)
+
+def training_with_one_hot_encoding(train_rows, test_rows):
+    None
 
 def main():
     train_rows, test_rows = read_datas()
