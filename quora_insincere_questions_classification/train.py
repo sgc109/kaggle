@@ -25,3 +25,6 @@ with open(glove_file_name, 'r', encoding='utf-8') as f:
             break
         line = line.rstrip()
         values = line.split()
+        word = values[0]
+        coef = values[1:]
+
