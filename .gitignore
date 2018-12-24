@@ -1,4 +1,4 @@
-
-*.csv
-embeddings/
 .idea/
+embeddings/
+*.csv
+*.h5
